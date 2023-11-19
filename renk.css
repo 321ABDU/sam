@@ -1,0 +1,131 @@
+
+.p {
+  font-size: 10px;
+}
+
+.form {
+  color: blue;
+  text-align: center;
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-auto-rows: 150px;
+  grid-template-areas:
+    "logo head head head head head"
+    "nav sl sl sl sl rek "
+    "nav sl sl sl sl rek "
+    "nav sl sl sl sl rek "
+    "nav sl sl sl sl rek "
+    "foot foot foot foot foot foot";
+
+  grid-gap:1px; 
+
+}
+
+.box {
+  background:black;
+  text-align: center;
+}
+
+.logo {
+  grid-area: logo;
+  border: 1px solid #000;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; 
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  
+}
+
+.head {
+  grid-area: head;
+  border: 1px solid #000;
+}
+
+.nav {
+  grid-area: nav;
+  border: 1px solid #000;
+  background:black;
+}
+
+.sidelef {
+  grid-area: sl;
+}
+
+.rek {
+  grid-area: rek;
+  border: 1px solid #000;
+  
+}
+
+.footer {
+  grid-area: foot;
+  border: 1px solid #000;
+ 
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  font-size: small-caption; 
+}
+
+.body {
+  width: 100%; 
+  height: 100vh;
+}
+.sor {
+    background-color: black;
+    color: red; 
+    padding: 10px; 
+    font-size: 16px; 
+    text-align: center; 
+    border: none; 
+    margin: 5px;
+}
+
+.head {
+	
+
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    animation: changeImage 6s infinite;
+	
+	grid-area: head;
+  border: 1px solid #000;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; 
+	
+}
+
+@keyframes changeImage {
+    0%, 100% {
+        background-image: url('1.jfif');
+    }
+	
+    33% {
+        background-image: url('2.jpg');
+    }
+    66% {
+        background-image: url('3.jpg');
+    }
+}
+
+.head img {
+  width: 100%;
+  height: 100%;
+  
+}
+

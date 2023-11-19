@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Sami</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="renk.css">
+</head>
+<body>
+
+<form class="form" onsubmit="return verifyPassword(event)">
+
+    <label for="ad">Adiniz</label>
+    <br>
+    <input id="ad" type="text" required> 
+    <br>
+<label for="soy">soyadiniz</label>
+    <br>
+    <input id="soy" type="text" required> 
+    <br>
+
+    
+
+    <label for="sif">sifre</label>
+    <br>
+    <input maxlength="8" id="sif" type="password" required>
+    <br>
+    <label for="sifTekrar">sifre tekrar yaz</label>
+    <br>
+    <input maxlength="8" id="sifTekrar" type="password" required>
+    
+    <h3>kisi bilgileri</h3>
+	<label for="telefon">Tel numaranız:</label><br>
+  <input type="text" id="telefon" name="telefon" placeholder="05xx-xxx-xx-xx"  required><br><br>
+
+  <label for="eposta">e-posta adresiniz: </label><br>
+  <input type="text" id="eposta" name="eposta" required><br>
+
+    <br>
+<label for="boy">boyunuzu girin</label>
+<br>
+<input id="boy" type="number" min="140" max="210">
+<br>
+
+<br>
+<h3>rolunuzu secin:<h3>
+<input id="html" type="radio" name="lang">
+<label for="html">html</label>
+
+<br>
+<input id="css" type="radio"  name="lang">
+<label for="css">css</label>
+<br>
+<input id="jav" type="radio"  name="lang">
+<label for="jav">java</label>
+<br>
+<input id="php" type="radio"  name="lang">
+<label for="php">php</label>
+<br>
+<h3>ilgili alanlarinzi secin::<h3>
+<input id="fr" type="checkbox" >
+<label for="fr">saglik</label>
+
+<br>
+<input id="ft" type="checkbox"
+<label for="ft">ahlak</label>
+<br>
+<input id="fy" type="checkbox">
+<label for="fy">guzelik</label>
+<br>
+<input id="fu" type="checkbox">
+<label for="fu">guc</label>
+<br>
+<h3>kendinizi bir kac gumle ile aciklayin:<h3>
+<textarea cols="20" rows="10"></textarea>
+<br>
+
+    <input type="reset" value="sifirla">
+    <input type="submit" value="gonder">
+
+</form>
+
+<script>
+    function verifyPassword(event) {
+        event.preventDefault(); 
+
+        var pwd1 = document.getElementById("sif").value;
+        var pwd2 = document.getElementById("sifTekrar").value;
+        if (pwd1 != pwd2) {
+            alert("**Parolalar Uyuşmuyor!");
+            return false;
+        } else {
+            alert("Üyelik başvurunuz alınmıştır.");
+          
+            return true;
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="renk.css">
+  <script>
+    function showListeSection() {
+      var iframe = window.frames["iframe_a"];
+      var body = iframe.contentDocument.body;
+
+      
+      if (!body.querySelector("#listeSection")) {
+        var listeSection = document.createElement("div");
+        listeSection.id = "listeSection";
+        listeSection.innerHTML = "<p>merhaba</p>";
+
+     
+        body.appendChild(listeSection);
+      }
+    }
+  </script>
+</head>
+
+<body class="form">
+  <form>
+    <div class="container">
+      <div class="box logo"><img src="lam.jfif"></div>
+      <div class="box head"></div>
+      <div class="box nav">
+        <ul>
+          <li><a href="" target="_self">ana sayfa</a></li>
+          <li><a href="javascript:void(0);" onclick="showListeSection()">oylu ol</a></li>
+          <li><a href="liste.html" target="_self">iletisim</a></li>
+          <li><a href="#" target="_self">tanim</a></li>
+        </ul>
+      </div>
+      <div class="box sidelef">
+        <iframe src="liste.html" style="height: 600px; width: 100%" title="Iframe Example" name="iframe_a"></iframe>
+        conteener
+      </div>
+      <div class="box rek">reklam</div>
+      <div class="box footer">
+        <input type="text" value="telegram" readonly class="sor">
+        <input type="text" value="facbook" readonly class="sor">
+        <br>
+        <input type="text" value="instagram" readonly class="sor">
+        <input type="text" value="twiter" readonly class="sor">
+        <input type="text" value="likend" readonly class="sor">
+      </div>
+    </div>
+  </form>
+</body>
+</html>
